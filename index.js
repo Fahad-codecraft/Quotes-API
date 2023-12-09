@@ -3,7 +3,7 @@ const cors = require('cors');
 const quotes = require('./quotes.json');
 const app = express();
 app.use(cors());
-const PORT = 8000;
+const PORT = process.env.PORT || 8001;
 
 app.get('/', (req, res) => {
   const html = `
